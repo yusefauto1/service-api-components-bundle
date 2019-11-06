@@ -18,7 +18,7 @@
         "symfony/serializer" : "^2.7.39",
         "symfony/monolog-bridge": "^2.7.39",
         "symfony/dependency-injection": "~3.0|~4.0",
-        "symfony/config": "~3.0|~4.0",
+        "symfony/config": "^2.7.39",
         "symfony/http-kernel": "^2.7.39",
         "symfony/property-info": "^2.7.39",
         "symfony/property-access": "~3.0|~4.0",
