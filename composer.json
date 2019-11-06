@@ -22,7 +22,7 @@
         "symfony/http-kernel": "^2.7.39",
         "symfony/property-info": "^2.7.39",
         "symfony/property-access": "~3.0|~4.0",
-        "symfony/yaml": "^2.7.9",
+        "symfony/yaml": "^2.7.39",
         "monolog/monolog": "~1.22",
         "fig/http-message-util": "^1.1.2",
         "auto1-oss/service-api-request": "^1.0"
