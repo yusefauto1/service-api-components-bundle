@@ -17,20 +17,20 @@
         "php": ">=7.0.8",
         "symfony/serializer" : "^2.7.39",
         "symfony/monolog-bridge": "^2.7.39",
-        "symfony/dependency-injection": "~3.0|~4.0",
+        "symfony/dependency-injection": "^2.7.39",
         "symfony/config": "^2.7.39",
         "symfony/http-kernel": "^2.7.39",
         "symfony/property-info": "^2.7.39",
-        "symfony/property-access": "~3.0|~4.0",
+        "symfony/property-access": "^2.7.39",
         "symfony/yaml": "^2.7.39",
         "monolog/monolog": "~1.22",
         "fig/http-message-util": "^1.1.2",
         "auto1-oss/service-api-request": "^1.0"
     },
     "require-dev": {
-        "symfony/console": "~3.0|~4.0",
+        "symfony/console": "^2.7.39",
         "phpunit/phpunit": "^4.8",
-        "symfony/phpunit-bridge": "^3.3.8",
+        "symfony/phpunit-bridge": "^2.7.39",
         "phpspec/prophecy": "^1.7.2"
     },
     "autoload": {
