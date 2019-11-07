@@ -22,4 +22,4 @@ services:
         arguments:
             - '@auto1.api.endpoint.registry'
         tags:
-            - 'console.command'
+            - { name: 'console.command'}
