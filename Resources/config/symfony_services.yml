@@ -1,5 +1,5 @@
 parameters:
-    auto1.api.serializer.normalizer.datetime.format: 'Y-m-d\TH:i:sO'
+#    auto1.api.serializer.normalizer.datetime.format: 'Y-m-d\TH:i:sO'
 
 #symfony services redefined with custom configuration specific for bundle
 services:
@@ -41,19 +41,19 @@ services:
     auto1.api.response.serializer:
         class: Symfony\Component\Serializer\Serializer
         arguments:
-            - ['@auto1.api.serializer.denormalizer.array_access', '@auto1.api.serializer.denormalizer.array', '@auto1.api.serializer.normalizer.datetime', '@auto1.api.response.transformer.normalizer']
-    #            - ['@serializer.encoder.json']
+            - ['@auto1.api.serializer.denormalizer.array_access', '@auto1.api.response.transformer.normalizer']
+            - ['@serializer.encoder.json']
 
     auto1.api.serializer.denormalizer.array_access:
         class: Auto1\ServiceAPIComponentsBundle\Service\Serializer\Normalizer\ArrayAccessNormalizer
+    #
+    #    auto1.api.serializer.denormalizer.array:
+    #        class: Symfony\Component\Serializer\Normalizer\ArrayDenormalizer
 
-    auto1.api.serializer.denormalizer.array:
-        class: Symfony\Component\Serializer\Normalizer\ArrayDenormalizer
-
-    auto1.api.serializer.normalizer.datetime:
-        class: Symfony\Component\Serializer\Normalizer\DateTimeNormalizer
-        arguments:
-            - '%auto1.api.serializer.normalizer.datetime.format%'
+    #    auto1.api.serializer.normalizer.datetime:
+    #        class: Symfony\Component\Serializer\Normalizer\DateTimeNormalizer
+    #        arguments:
+    #            - '%auto1.api.serializer.normalizer.datetime.format%'
 
     auto1.api.serializer.normalizer.get_set_method:
         class: Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer
@@ -71,5 +71,5 @@ services:
     auto1.api.request.serializer:
         class: Symfony\Component\Serializer\Serializer
         arguments:
-            - ['@auto1.api.serializer.normalizer.datetime', '@auto1.api.serializer.denormalizer.array', '@auto1.api.serializer.normalizer.object', '@auto1.api.serializer.normalizer.get_set_method']
+            - ['@auto1.api.serializer.denormalizer.array_access', '@auto1.api.response.transformer.normalizer']
             - ['@auto1.api.encoder.json', '@auto1.api.encoder.url', '@auto1.api.encoder.void']
