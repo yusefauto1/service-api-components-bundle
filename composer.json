@@ -20,7 +20,7 @@
         "symfony/dependency-injection": "^2.7.39",
         "symfony/config": "^2.7.39",
         "symfony/http-kernel": "^2.7.39",
-        "symfony/property-info": "^2.7.39",
+        "symfony/property-info": "^2.8",
         "symfony/property-access": "^2.7.39",
         "symfony/yaml": "^2.7.39",
         "monolog/monolog": "~1.22",
